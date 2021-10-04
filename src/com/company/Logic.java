@@ -40,7 +40,7 @@ public class Logic {
                 System.out.println("Используются одновременно разные системы счисления.");
                 throw new IllegalArgumentException();
             }
-            if ((isNumsInRange(Integer.parseInt(blocks[0]))) && (isNumsInRange(Integer.parseInt(blocks[1])))) { //метод проверка входят ли введенные цифры в заданный диапазон 1...9
+            if ((isNumsInRange(Integer.parseInt(blocks[0]))) && (isNumsInRange(Integer.parseInt(blocks[1])))) { 
                 result = calc.calculate(Integer.parseInt(blocks[0]), Integer.parseInt(blocks[1]), sign); 
             } else {
                 System.out.println("Введенные числа должны быть только от 1 до 10 включительно."); 
