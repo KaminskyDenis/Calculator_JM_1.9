@@ -56,7 +56,7 @@ public class Logic {
         }
     }
 
-    private static char checkSign(String text) { //определение знака арифметической операции
+    private static char checkSign(String text) { 
         if (text.indexOf("+") != -1) {
             return '+';
         } else if (text.indexOf("-") != -1) {
