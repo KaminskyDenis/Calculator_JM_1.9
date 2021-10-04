@@ -22,10 +22,9 @@ public class Logic {
         try {
             System.out.println("Введите арифметическую операцию:");
             num1 = reader.nextLine();
-            text = num1.replaceAll("\\s",""); // удалить все пробелы из введенной строки
-            String[] blocks = text.split("[+-/*]"); // поместить в строковый массив все переменные до знака и после любого из арифметических знаков
-            romano = 0;
-            sign = checkSign(text); // метод определения знака операции
+            text = num1.replaceAll("\\s",""); 
+            String[] blocks = text.split("[+-/*]"); 
+            sign = checkSign(text); 
 
             for (int i = 0; i <= 9; i++) {
                 if (rome[i].equals(blocks[0])) {
@@ -42,9 +41,9 @@ public class Logic {
                 throw new IllegalArgumentException();
             }
             if ((isNumsInRange(Integer.parseInt(blocks[0]))) && (isNumsInRange(Integer.parseInt(blocks[1])))) { //метод проверка входят ли введенные цифры в заданный диапазон 1...9
-                result = calc.calculate(Integer.parseInt(blocks[0]), Integer.parseInt(blocks[1]), sign); //выполнить арифметическую операцию в классе Calculator
+                result = calc.calculate(Integer.parseInt(blocks[0]), Integer.parseInt(blocks[1]), sign); 
             } else {
-                System.out.println("Введенные числа должны быть только от 1 до 10 включительно."); //выдать ошибку, если введенные числа вне диапазона 1...9
+                System.out.println("Введенные числа должны быть только от 1 до 10 включительно."); 
                 throw new IllegalArgumentException();
             }
             if (romano == 2) {
@@ -72,7 +71,7 @@ public class Logic {
         }
     }
 
-    private static boolean isNumsInRange(int number) { //проверка введенного числа >=1 и <=10
+    private static boolean isNumsInRange(int number) { 
         return (number >= minNum && number <= maxNum);
     }
 }
