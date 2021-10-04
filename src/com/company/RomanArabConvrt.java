@@ -22,7 +22,7 @@ class RomanArabConvrt {
             }
         }
         if (romanNumeral.length() > 0) {
-            throw new IllegalArgumentException(" Ошибка, число" + input + " не может быть конвертирован в Римскую цифру");
+            throw new IllegalArgumentException(" Ошибка, число" + input + " не может быть конвертировано в Римскую ");
         }
         System.out.println(result);
         return result;
@@ -30,7 +30,7 @@ class RomanArabConvrt {
 
     public static String arabicToRoman(int number) {
         if ((number <= 0) || (number > 100)) {
-            System.out.println("Ошибка, " + number + " число вне допустимых значений (0,100]");
+            System.out.println("Ошибка, " + number + " число вне допустимых значений (0,100)");
             throw new IllegalArgumentException();
         }
 
